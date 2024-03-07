@@ -12,3 +12,8 @@ sources:
       - name: TEAMS
       - name: TEAM_SPEND_BY_SEASON
       - name: TEAM_STATS_BY_SEASON
+  - name: DBT_IKER_CAMARA
+    database: IKERCAMARAVKVCU_ANALYTICS
+    schema: ADDITIONAL_DATA
+    tables:
+      - name: PLAYER_AWARDS

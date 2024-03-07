@@ -1,0 +1,129 @@
+version: 2
+models:
+  - name: offensive_win_shares
+    description: >-
+        This model computes Defensive Win Shares (DFS) of a player in a season.
+    columns:
+      - name: season_id
+        description: Unique identifier for the NBA season.
+        meta:
+          dimension:
+            type: string
+      - name: season
+        description: NBA season during which the game was played, formatted as YYYY-YY.
+        meta:
+          dimension:
+            type: string
+      - name: team_id
+        description: Unique identifier for the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_name
+        description: Full name of the team.
+        meta:
+          dimension:
+            type: string
+      - name: player_id
+        description: Unique identifier for the player.
+        meta:
+            dimension:
+            type: number
+      - name: player_name
+        description: Full name of the player.
+        meta:
+            dimension:
+            type: number
+      - name: ows
+        description: Offensive Win Shares (OWS) of the player in the season.
+        meta:
+            dimension:
+            type: number
+  - name: defensive_win_shares
+    description: >-
+      This model computes Defensive Win Shares (DFS) of a player in a season.
+    columns:
+      - name: season_id
+        description: Unique identifier for the NBA season.
+        meta:
+          dimension:
+            type: string
+      - name: season
+        description: NBA season during which the game was played, formatted as YYYY-YY.
+        meta:
+          dimension:
+            type: string
+      - name: team_id
+        description: Unique identifier for the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_name
+        description: Full name of the team.
+        meta:
+          dimension:
+            type: string
+      - name: player_id
+        description: Unique identifier for the player.
+        meta:
+            dimension:
+            type: number
+      - name: player_name
+        description: Full name of the player.
+        meta:
+            dimension:
+            type: number
+      - name: dws
+        description: Defensive Win Shares (DWS) of the player in the season.
+        meta:
+            dimension:
+            type: number
+  - name: win_shares
+    description: >-
+      This model computes total Win Shares (WS) for a player in a season.
+    columns:
+      - name: season_id
+        description: Unique identifier for the NBA season.
+        meta:
+          dimension:
+            type: string
+      - name: season
+        description: NBA season during which the game was played, formatted as YYYY-YY.
+        meta:
+          dimension:
+            type: string
+      - name: team_id
+        description: Unique identifier for the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_name
+        description: Full name of the team.
+        meta:
+          dimension:
+            type: string
+      - name: player_id
+        description: Unique identifier for the player.
+        meta:
+            dimension:
+            type: number
+      - name: player_name
+        description: Full name of the player.
+        meta:
+            dimension:
+            type: number
+      - name: ows
+        description: Offensive Win Shares (OWS) of the player in the season.
+        meta:
+            dimension:
+            type: number
+      - name: dws
+        description: Defensive Win Shares (DWS) of the player in the season.
+        meta:
+            dimension:
+            type: number
+      - name: ws
+        description: Win Shares (OWS) of the player in the season. Sum of Defensive Win Shares and Offensive Win Shares.
+        meta:
+            dimension:
+            type: number

@@ -18,15 +18,15 @@
 
 Imagine a world where MVPs, Defensive Players of the Year, and Rookies of the Year are awarded based on undeniable performance data, free from bias and human error. In the quest for excellence, why leave awards to the subjective judgments of a jury when the unerring eye of advanced statistical metrics can crown the best with precision?
 
-The project will analyze the jury's award decisions against statistical data to identify discrepancies and highlight the most underrated players of this era, aiming for a clearer and fairer assessment of player excellence.
-
-### [My GitHub repo](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/?tab=readme-ov-file#my-github-repo)
+This project analyzes the jury's award decisions against statistical data to identify discrepancies and highlight the most underrated players of this era, aiming for a clearer and fairer assessment of player excellence.
 
 ## Data Sources
-My analysis leverages three key NBA datasets from Paradime:
+The analysis leverages three NBA datasets provided by Paradime under the *NBA_HISTORICAL.PUBLIC* schema:
+- *GAMES*
 - *PLAYER_GAME_LOGS*
-- *TEAM_STATS_BY_SEASON*
 - *COMMON_PLAYER_INFO*
+
+Additionally, a dataset with NBA player awards was curated using the NBA API and loaded to the next Snowflace instance *IKERCAMARAVKVCU_ANALYTICS.ADDITIONAL_DATA.PLAYER_AWARDS*.
 
 ## Methodology
 ### Tools Used

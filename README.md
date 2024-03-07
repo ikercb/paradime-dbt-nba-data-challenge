@@ -42,14 +42,13 @@ Additionally, a dataset with NBA player awards was curated using the NBA API and
 - SQL and dbt™ to transform _stg_team_stats_by_season_ for insights on NBA Teams' historical playoff performance.
 
 ## Visualizations
-### Team Playoff Appearances
-Visualization of playoff appearances for all 30 NBA teams, including their playoff appearance rates.
+### Best Player Seasons
+Visualization of the 30 best individual season according to Win Shares.
 
-![Team Playoff Appearances](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/assets/107123308/cd69a2fa-6b60-44de-b8bc-2f6a6828f033)
+![Best WS Seasons](https://github.com/ikercb/paradime-dbt-nba-data-challenge/blob/main/visualizations/best_ws_player_season.png)
 
 *Insights:*
-The Los Angeles Lakers' dominance in playoff appearances, and the San Antonio Spurs' highest playoff appearance rate.
-The Spurs have only missed the playoffs 9 times!
+Michel Jordan had the best season ever in the 1987-88, followed by Lebron James in the 2008-09.
 
 ### Player Playoff Games
 Assessment of NBA players with the highest number of playoff game wins and their win percentages. The '*' next to NBA Player name indicates if they're 

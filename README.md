@@ -1,8 +1,5 @@
 # dbt™ Data Modeling Challenge - NBA Edition
 
-# Example Submission
-Here's an example project that fulfills all requirements and would be elligble eligible for cash prizes. Feel free to use this template for your submission. 
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Data Sources](#data-sources)
@@ -18,7 +15,10 @@ Here's an example project that fulfills all requirements and would be elligble e
 5. [Conclusions](#conclusions)
 
 ## Introduction
-Explore my project for the _dbt™ data modeling challenge - NBA Edition_, Hosted by [Paradime](https://www.paradime.io/)! This project dives into the analysis and visualization of NBA statistics, designed for basketball enthusiasts and analysts.
+
+Imagine a world where MVPs, Defensive Players of the Year, and Rookies of the Year are awarded based on undeniable performance data, free from bias and human error. In the quest for excellence, why leave awards to the subjective judgments of a jury when the unerring eye of advanced statistical metrics can crown the best with precision?
+
+The project will analyze the jury's award decisions against statistical data to identify discrepancies and highlight the most underrated players of this era, aiming for a clearer and fairer assessment of player excellence.
 
 ### [My GitHub repo](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/?tab=readme-ov-file#my-github-repo)
 

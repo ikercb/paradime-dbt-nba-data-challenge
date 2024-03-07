@@ -50,17 +50,50 @@ Visualization of the 30 best individual season according to Win Shares.
 *Insights:*
 Michel Jordan had the best season ever in the 1987-88, followed by Lebron James in the 2008-09.
 
-### Player Playoff Games
-Assessment of NBA players with the highest number of playoff game wins and their win percentages. The '*' next to NBA Player name indicates if they're 
-a member of the [NBA Greatest 75 Team](https://www.nba.com/news/nba-75th-anniversary-team-announced)
+### MVPs
 
-![Player Playoff Games](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/assets/107123308/ffd6abf3-b8a8-411f-a0be-12402a5d1b45)
+![WS MVPs](https://github.com/ikercb/paradime-dbt-nba-data-challenge/blob/main/visualizations/ws_mvps.png)
 
-*Insights:* 
-LeBron James has the most playoff wins of any player, but here's what's most interesting: 
-Of the 25 players with the most playoff wins, only 12 of them are members of the [NBA Greatest 75 team](https://www.nba.com/news/nba-75th-anniversary-team-announced). 
-There are several players listed that impact playoff wins and compliment their team's best players, but aren't known 
-as on the the all time greats, such as: Derek Fisher, Robert Horry, Danny Green. 
+| WS MVP WINNER    | MVP WINNER           | SEASON   |
+|----------------|----------------------|----------|
+| Nikola Jokic   | Joel Embiid          | 2022-23  |
+| Nikola Jokic   | Nikola Jokic         | 2021-22  |
+| Nikola Jokic   | Nikola Jokic         | 2020-21  |
+| James Harden   | Giannis Antetokounmpo| 2019-20  |
+| James Harden   | Giannis Antetokounmpo| 2018-19  |
+| James Harden   | James Harden         | 2017-18  |
+| Stephen Curry  | Stephen Curry        | 2015-16  |
+| James Harden   | Stephen Curry        | 2014-15  |
+| Kevin Durant   | Kevin Durant         | 2013-14  |
+| LeBron James   | LeBron James         | 2012-13  |
+| LeBron James   | LeBron James         | 2011-12  |
+| LeBron James   | Derrick Rose         | 2010-11  |
+| LeBron James   | LeBron James         | 2009-10  |
+| LeBron James   | LeBron James         | 2008-09  |
+| Chris Paul     | Kobe Bryant          | 2007-08  |
+| Dirk Nowitzki  | Dirk Nowitzki        | 2006-07  |
+| Dirk Nowitzki  | Steve Nash           | 2005-06  |
+| Kevin Garnett  | Steve Nash           | 2004-05  |
+| Kevin Garnett  | Kevin Garnett        | 2003-04  |
+| Tim Duncan     | Tim Duncan           | 2002-03  |
+| Tim Duncan     | Tim Duncan           | 2001-02  |
+| Shaquille O'Neal| Allen Iverson        | 2000-01  |
+| Shaquille O'Neal| Shaquille O'Neal    | 1999-00  |
+| Karl Malone    | Karl Malone          | 1998-99  |
+| Karl Malone    | Michael Jordan       | 1997-98  |
+| Michael Jordan | Karl Malone          | 1996-97  |
+| Michael Jordan | Michael Jordan       | 1995-96  |
+| David Robinson | David Robinson       | 1994-95  |
+| David Robinson | Hakeem Olajuwon      | 1993-94  |
+| Michael Jordan | Charles Barkley      | 1992-93  |
+| Michael Jordan | Michael Jordan       | 1991-92  |
+| Michael Jordan | Michael Jordan       | 1990-91  |
+| Michael Jordan | Magic Johnson        | 1989-90  |
+| Michael Jordan | Magic Johnson        | 1988-89  |
+| Michael Jordan | Michael Jordan       | 1987-88  |
+| Michael Jordan | Magic Johnson        | 1986-87  |
+| Larry Bird     | Larry Bird           | 1985-86  |
+
 
 ### Top Playoff Scorers
 Showcases players who achieved the the most points scored in any playoff season.

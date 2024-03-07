@@ -35,11 +35,10 @@ Additionally, a dataset with NBA player awards was curated using the NBA API and
 - **[Sigma Computing](https://www.sigmacomputing.com/)** for data visualization.
 
 ### Applied Techniques
-- SQL and dbt™ to transform _stg_player_game_logs_ into seasonal player statistics
-- SQL and dbt™ to transform _stg_player_game_logs_ and _stg_common_player_info_ to understand
-  playoff and regular season performance by individual players
-- SQL and dbt™ to transform _stg_common_player_info_ for insights on NBA players' college backgrounds.
-- SQL and dbt™ to transform _stg_team_stats_by_season_ for insights on NBA Teams' historical playoff performance.
+
+Win Shares (WS) is chosen for the analysis because it offers a comprehensive evaluation by employing a wide range of statistics, allows for comparisons across eras, and it is easily understandable as it estimates a player's contribution to team wins.
+
+The calculations follow the guide provided by [Basketball Reference](https://www.basketball-reference.com/about/ws.html?__hstc=205977932.6acc30b029dcfb715694e790b0d56291.1709472165077.1709472165077.1709472165077.1&__hssc=205977932.1.1709472165077&__hsfp=468305008).
 
 ## Visualizations
 ### Best Player Seasons

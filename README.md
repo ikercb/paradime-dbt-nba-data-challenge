@@ -32,7 +32,7 @@ Additionally, a dataset with NBA player awards was curated using the NBA API and
 ### Tools Used
 - **[Paradime](https://www.paradime.io/)** for SQL, dbt™.
 - **[Snowflake](https://www.snowflake.com/)** for data storage and computing.
-- **Google Sheets** for data visualization.
+- **[Sigma Computing](https://www.sigmacomputing.com/)** for data visualization.
 
 ### Applied Techniques
 - SQL and dbt™ to transform _stg_player_game_logs_ into seasonal player statistics

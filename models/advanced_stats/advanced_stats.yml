@@ -1,0 +1,307 @@
+version: 2
+models:
+  - name: team_game_advanced_stats
+    description: >-
+      This models adds opponent statistics and compute advanced metrics needed for the offensive rating and defensive rating.
+      Only takes games from the 1985-86 season because previously not all the stats were registered in the box score.
+    columns:
+      - name: season_id
+        description: Unique identifier for the NBA season.
+        meta:
+          dimension:
+            type: string
+      - name: season
+        description: NBA season during which the game was played, formatted as YYYY-YY.
+        meta:
+          dimension:
+            type: string
+      - name: team_id
+        description: Unique identifier for the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_name
+        description: Full name of the team.
+        meta:
+          dimension:
+            type: string
+      - name: game_id
+        description: Unique identifier for the game.
+        meta:
+          dimension:
+            type: number
+      - name: game_type
+        description: Type of game, e.g., Regular Season.
+        meta:
+          dimension:
+            type: string
+      - name: team_mp
+        description: Minutes played by the team, adjusted to a minimum of 240 minutes.
+        meta:
+          dimension:
+            type: number
+      - name: team_pts
+        description: Points scored by the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_fgm
+        description: Field goals made by the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_fga
+        description: Field goals attempted by the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_ftm
+        description: Free throws made by the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_fta
+        description: Free throws attempted by the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_fg3m
+        description: Three-point field goals made by the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_ast
+        description: Assists made by the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_db
+        description: Defensive rebounds grabbed by the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_orb
+        description: Offensive rebounds grabbed by the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_tov
+        description: Turnovers committed by the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_blk
+        description: Blocks made by the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_stl
+        description: Steals made by the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_pf
+        description: Personal fouls committed by the team.
+        meta:
+          dimension:
+            type: number
+      - name: opp_mp
+        description: Minutes played by the opponent, adjusted to a minimum of 240 minutes.
+        meta:
+          dimension:
+            type: number
+      - name: opp_pts
+        description: Points scored by the opponent.
+        meta:
+          dimension:
+            type: number
+      - name: opp_fgm
+        description: Field goals made by the opponent.
+        meta:
+          dimension:
+            type: number
+      - name: opp_fga
+        description: Field goals attempted by the opponent.
+        meta:
+          dimension:
+            type: number
+      - name: opp_ftm
+        description: Free throws made by the opponent.
+        meta:
+          dimension:
+            type: number
+      - name: opp_fta
+        description: Free throws attempted by the opponent.
+        meta:
+          dimension:
+            type: number
+      - name: opp_fg3m
+        description: Three-point field goals made by the opponent.
+        meta:
+          dimension:
+            type: number
+      - name: opp_ast
+        description: Assists made by the opponent.
+        meta:
+          dimension:
+            type: number
+      - name: opp_dreb
+        description: Defensive rebounds grabbed by the opponent.
+        meta:
+          dimension:
+            type: number
+      - name: opp_oreb
+        description: Offensive rebounds grabbed by the opponent.
+        meta:
+          dimension:
+            type: number
+      - name: opp_tov
+        description: Turnovers committed by the opponent.
+        meta:
+          dimension:
+            type: number
+      - name: team_scoring_poss
+        description: Calculated scoring possessions for the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_poss
+        description: Total possessions by the team.
+        meta:
+          dimension:
+            type: number
+      - name: opponent_poss
+        description: Total possessions by the opponent.
+        meta:
+          dimension:
+            type: number
+      - name: team_orb_pct
+        description: Offensive rebound percentage for the team.
+        meta:
+          dimension:
+            type: number
+      - name: opp_fg_pct
+        description: Opponent's field goal percentage.
+        meta:
+          dimension:
+            type: number
+      - name: team_play_pct
+        description: Team's play percentage calculated from scoring possessions and total possessions.
+        meta:
+          dimension:
+            type: number
+      - name: pace
+        description: Pace of the game calculated based on team and opponent possessions.
+        meta:
+          dimension:
+            type: number
+      - name: team_defensive_rating
+        description: Team's defensive rating calculated based on opponent points per possession.
+        meta:
+          dimension:
+            type: number
+      - name: team_orb_weight
+        description: Weighted offensive rebound percentage for the team.
+        meta:
+          dimension:
+            type: number
+  - name: player_game_offensive_rating
+    description: >-
+        This model computes the individual offensive possesions and individual points produced for each game a player played since 1985.
+        Using FBref formulas: https://www.basketball-reference.com/about/ratings.html
+    columns:
+      - name: season_id
+        description: Unique identifier for the NBA season.
+        meta:
+          dimension:
+            type: string
+      - name: season
+        description: NBA season during which the game was played, formatted as YYYY-YY.
+        meta:
+          dimension:
+            type: string
+      - name: team_id
+        description: Unique identifier for the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_name
+        description: Full name of the team.
+        meta:
+          dimension:
+            type: string
+      - name: game_id
+        description: Unique identifier for the game.
+        meta:
+          dimension:
+            type: number
+      - name: player_id
+        description: Unique identifier for the player.
+        meta:
+            dimension:
+            type: number
+      - name: player_name
+        description: Full name of the player.
+        meta:
+            dimension:
+            type: number
+      - name: tot_poss
+        description: Total offensive possesions in a game by a player.
+        meta:
+            dimension:
+            type: number
+      - name: pts_prod
+        description: Points produced in a game by a player.
+        meta:
+            dimension:
+            type: number
+  - name: player_game_defensive_rating
+    description: >-
+      This models adds opponent statistics and compute advanced metrics needed for the offensive rating and defensive rating.
+      Using FBref formulas: https://www.basketball-reference.com/about/ratings.html
+    columns:
+      - name: season_id
+        description: Unique identifier for the NBA season.
+        meta:
+          dimension:
+            type: string
+      - name: season
+        description: NBA season during which the game was played, formatted as YYYY-YY.
+        meta:
+          dimension:
+            type: string
+      - name: team_id
+        description: Unique identifier for the team.
+        meta:
+          dimension:
+            type: number
+      - name: team_name
+        description: Full name of the team.
+        meta:
+          dimension:
+            type: string
+      - name: game_id
+        description: Unique identifier for the game.
+        meta:
+          dimension:
+            type: number
+      - name: player_id
+        description: Unique identifier for the player.
+        meta:
+            dimension:
+            type: number
+      - name: player_name
+        description: Full name of the player.
+        meta:
+            dimension:
+            type: number
+      - name: mp
+        description: Minutes played in a game by a player.
+        meta:
+            dimension:
+            type: number
+      - name: def_rating
+        description: Individual defensive rating in a game by a player.
+        meta:
+            dimension:
+            type: number

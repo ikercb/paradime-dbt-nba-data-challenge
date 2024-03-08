@@ -143,7 +143,7 @@ Comparing the actual selections with those using Win Shares, we can observe that
 | Larry Bird           | 3              | 3           | 0               | 1            | 0              | 0           |
 | Nikola Jokic         | 3              | 3           | 2               | 2            | 1              | 0           |
 
-You can see the full list of deserving winners here. There are some good players, not necessarily big names, who would have deserved recognition, such as Andre Iguodala, Mike Conley, or Paul Millsap. These players could be the ones to spark a data revolution to gain more recognition.
+You can see the full list of deserving winners [here](https://github.com/ikercb/paradime-dbt-nba-data-challenge/blob/main/data/all_nba.md). There are some good players, not necessarily big names, who would have deserved recognition, such as Andre Iguodala, Mike Conley, or Paul Millsap. These players could be the ones to spark a data revolution to gain more recognition.
 
 ### Rookie of the Year
 

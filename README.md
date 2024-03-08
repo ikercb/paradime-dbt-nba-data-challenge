@@ -43,7 +43,7 @@ Win Shares (WS) is chosen for the analysis because it offers a comprehensive eva
 
 The calculations follow the guide provided by [Basketball Reference](https://www.basketball-reference.com/about/ws.html?__hstc=205977932.6acc30b029dcfb715694e790b0d56291.1709472165077.1709472165077.1709472165077.1&__hssc=205977932.1.1709472165077&__hsfp=468305008).
 
-## Visualizations
+## Insights
 ### Best Player Seasons
 
 Who has played the best season in recent times? Well, it seems the two best players in the GOAT debate are also at the top, according to advanced statistical analysis. Michael Jordan dominates the list, with multiple seasons in the top 10, leaving no doubt that his peak was on another level.

@@ -176,4 +176,4 @@ In any case, advanced metrics have a keen eye. They can recognize talent and ski
 
 With the exception of rookies. C'mon, Mitchell Robinson over Luka Doncic? 
 
-While advanced statistical analysis helps mitigate some human biases, no metric is perfect and we're not at a point where we can base award decisions entirely on data. However, the future might see a more balanced voting system, where analytics have its own weight, especially as we gather more data and develop better metrics to measure player performance. Many journalists likely already consult these metrics when casting their votes, which is a victory for data nerds.
+It is true that advanced statistical metrics have limitations, but it removes some of the bias that humans have. We are not ready to choose the awards based only on data right now, but could we see that in the future? I would like to see a combined voting system of analytics and experts, specially as we get more data and get better metrics to measure player performance. In any case, I'm sure many journalists look at them when making their votes and that's already a win for data nerds.

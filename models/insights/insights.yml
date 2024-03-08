@@ -1,0 +1,67 @@
+version: 2
+models:
+  - name: mvps_win_shares
+    description: >-
+      This models assigns the MVP award to the player with the most Win Shares every season. 
+      Additionally, it compares the player with the real winner of the award.
+    columns:
+      - name: season
+        description: NBA season during which the game was played, formatted as YYYY-YY.
+        meta:
+          dimension:
+            type: string
+      - name: ws_mvp
+        description: Full name with the player with the most Win Shares in a season.
+        meta:
+          dimension:
+            type: string
+      - name: mvp
+        description: Full name of the player that got the MVP award in the season.
+        meta:
+          dimension:
+            type: string
+  - name: roy_win_shares
+    description: >-
+      This models assigns the Rookie of the Year award to the rookie player with the most Win Shares every season. 
+      Additionally, it compares the player with the real winner of the award.
+    columns:
+      - name: season
+        description: NBA season during which the game was played, formatted as YYYY-YY.
+        meta:
+          dimension:
+            type: string
+      - name: ws_roy
+        description: Full name with the rookie player with the most Win Shares in a season.
+        meta:
+          dimension:
+            type: string
+      - name: roy
+        description: Full name of the player that got the Rookie of the Year award in the season.
+        meta:
+          dimension:
+            type: string
+  - name: all_nba_win_shares
+    description: >-
+      This models defines the All-NBA teams based on the players with the most Win Shares every season.
+      Each team consists of one center, two forwards and two centers. 
+    columns:
+      - name: season
+        description: NBA season during which the game was played, formatted as YYYY-YY.
+        meta:
+          dimension:
+            type: string
+      - name: player_name
+        description: Full name of the player.
+        meta:
+          dimension:
+            type: string
+      - name: all_nba_team_number
+        description: Integer indicating whether the player belongs to the first, second or third team.
+        meta:
+          dimension:
+            type: number
+      - name: position
+        description: Position of the player. It can be 'G' for guards, 'F' for forwards and 'C' for centers.
+        meta:
+          dimension:
+            type: string

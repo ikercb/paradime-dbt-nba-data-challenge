@@ -6,19 +6,18 @@
 3. [Methodology](#methodology)
    - [Tools Used](#tools-used)
    - [Applied Techniques](#applied-techniques)
-4. [Visualizations](#visualizations)
-   - [Team Playoff Appearances](#team-playoff-appearances)
-   - [Player Playoff Games](#player-playoff-games)
-   - [Top Playoff Scorers](#top-playoff-scorers)
-   - [Top Regular Season Scorers](#top-regular-season-scorers)
-   - [NBA Players by University](#nba-players-by-university)
+4. [Insights](#visualizations)
+   - [Best Player Seasons](#best-player-seasons)
+   - [MVPs](#player-playoff-games)
+   - [All-NBA Teams](#all-nba-teams)
+   - [Rookie of the Year](#rookie-of-the-year)
 5. [Conclusions](#conclusions)
 
 ## Introduction
 
-Imagine a world where MVPs, Defensive Players of the Year, and Rookies of the Year are awarded based on undeniable performance data, free from bias and human error. In the quest for excellence, why leave awards to the subjective judgments of a jury when the unerring eye of advanced statistical metrics can crown the best with precision?
+Imagine a world where the MVP, the Rookie of the Year or who belongs to the All-NBA Teams are awarded free from human bias. Is that even possible? Could we replace the subjective judgements of media panel and use advanced statistical metrics to crown the best?
 
-This project analyzes the jury's award decisions against statistical data to identify discrepancies and highlight the most underrated players of this era, aiming for a clearer and fairer assessment of player excellence.
+This project pretends to answer exactly that. To review the main individual awards in the NBA and see what would happen if they were left to the hands of the data nerds. Would be find shocking surprises? Keep reading and you will find out!
 
 ## Data Sources
 The analysis leverages three NBA datasets provided by Paradime under the *NBA_HISTORICAL.PUBLIC* schema:
@@ -36,22 +35,32 @@ Additionally, a dataset with NBA player awards was curated using the NBA API and
 
 ### Applied Techniques
 
-Win Shares (WS) is chosen for the analysis because it offers a comprehensive evaluation by employing a wide range of statistics, allows for comparisons across eras, and it is easily understandable as it estimates a player's contribution to team wins.
+Win Shares (WS) is chosen for the analysis because it offers a comprehensive evaluation by employing a wide range of box score statistics, allows for comparisons across eras, and it is easily understandable as it estimates a player's contribution to team wins.
 
 The calculations follow the guide provided by [Basketball Reference](https://www.basketball-reference.com/about/ws.html?__hstc=205977932.6acc30b029dcfb715694e790b0d56291.1709472165077.1709472165077.1709472165077.1&__hssc=205977932.1.1709472165077&__hsfp=468305008).
 
 ## Visualizations
 ### Best Player Seasons
-Visualization of the 30 best individual season according to Win Shares.
+
+Who has played the best season in the recent times? Well, it seems the two best players in the GOAT debate are also on the top if we listen to the advanced statistical analysis. Michael Jordan dominates the list with multiple seasons. There is no doubt his peak was at another level.
+
+Looking at the list of the best 30 season, there aren't big surprises. And many of the hard to forget seasons appear like Curry's 2015-16 or Dirk Nowitzki 2005-06.
 
 ![Best WS Seasons](https://github.com/ikercb/paradime-dbt-nba-data-challenge/blob/main/visualizations/best_ws_player_season.png)
 
-*Insights:*
-Michel Jordan had the best season ever in the 1987-88, followed by Lebron James in the 2008-09.
-
 ### MVPs
 
+Now, let's get into it. The MVP debate generates a ton of opinions every year, but only one player can be crown each season. Were all the MVPs deserved? Well, we all have our favourites and I'm sure there are few seasons when the decision was unanimous. 
+
+If we look at the data, again we see that the data loves Michael Jordan. He won 6 MVPs, but according he led the league in Win Shares in 9 seasons! Should he have gotten a few more?
+
+Lebron James also should have won one more if we relied on Win Shares and Derrick Rose wouldn't have any.
+
+The analytics are specially cruel with some player as it considers that they shouldn't have one. Players like Giannis Antetokounmpo, Steve Nash or Kobe Bryant shockingly appear on this list.
+
 ![WS MVPs](https://github.com/ikercb/paradime-dbt-nba-data-challenge/blob/main/visualizations/ws_mvps.png)
+
+You can find the full list with the winner and who should have won in the next table:
 
 | WS MVP WINNER    | MVP WINNER           | SEASON   |
 |----------------|----------------------|----------|
@@ -93,33 +102,31 @@ Michel Jordan had the best season ever in the 1987-88, followed by Lebron James 
 | Michael Jordan | Magic Johnson        | 1986-87  |
 | Larry Bird     | Larry Bird           | 1985-86  |
 
+### All-NBA Teams
 
-### Top Playoff Scorers
-Showcases players who achieved the the most points scored in any playoff season.
 
-![Top Playoff Scorers](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/assets/107123308/db51f47a-5cfb-431c-9c7b-3a793a6b4352)
+### Rookie of the Year
 
-*Insights:* 
-Michael Jordan, LeBron James, and Kobe Bryant are the only players having three seasons within the top 25 
-highest most points scored in a playoff season.
+So far, so good. Some surprises, but no scandals I would say. Until I decided to look at the ROY.
 
-### Top Regular Season Scorers
-Highlights NBA players who scored the most in regular seasons.
+Just look at the last 10 years:
 
-![Top Regular Season Scorers](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/assets/107123308/774223ad-11f0-4202-817f-5a8c1daf3afc)
+| WS ROY               | ROY                        | SEASON   |
+|----------------------|----------------------------|----------|
+| Walker Kessler       | Paolo Banchero             | 2022-23  |
+| Scottie Barnes       | Scottie Barnes             | 2021-22  |
+| Isaiah Stewart       | Lamelo Ball                | 2020-21  |
+| Brandon Clarke       | Ja Morant                  | 2019-20  |
+| Mitchell Robinson    | Luka Doncic                | 2018-19  |
+| Ben Simmons          | Ben Simmons                | 2017-18  |
+| Malcolm Brogdon      | Malcolm Brogdon            | 2016-17  |
+| Karl-Anthony Towns   | Karl-Anthony Towns         | 2015-16  |
+| Nikola Mirotic       | Andrew Wiggins             | 2014-15  |
+| Mason Plumlee        | Michael Carter-Williams    | 2013-14  |
 
-*Insights:* 
-Wilt Chamberlain is one of the best regular season scorer of all time. In addition to having the most points scored 
-in any regular season ever (4,029), he also has six season in the top 25. The only other player with 6 top 25 seasons is Michael Jordan.
-In the chart above, notice that Wilt Chamberlain doesn't appear once in the top 25 playoff scorers of all time 👀.
+Isaiah Stewart over Lamelo Ball? Brandon Clarke over Ja Morant? Mitchell Robinson over Luka Doncic?????
 
-### NBA Players by University
-Displays which universities have produced the most NBA players.
-
-![NBA Players by University](https://github.com/paradime-io/paradime-dbt-nba-data-challenge/assets/107123308/e21af17a-9cb8-491a-8e0d-b70eae118324)
-
-*Insights:* 
-Kentucky has produced the most NBA players in NBA history by a significant margin.... Go Wildcats! Also, this data is [slightly inaccurate](https://erudera.com/resources/colleges-with-most-nba-players/), but that's the NBA API's fault, not mine 🤣
+Maybe I was too early to remove the professional jury from the decision process. Not sure that's a good idea anymore.
 
 ## Conclusions
 This project successfully extracts significant insights from NBA data that NBA fans would find interesting, such as: 

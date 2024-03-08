@@ -41,11 +41,14 @@ ws_all_nba AS (
     FROM 
         position_ranking
     WHERE
-        ( position_rank <= 6 AND position = 'G' ) 
+        -- Before 1988 there were only two All-NBA teams
+        ( position_rank <= 6 AND position IN ('G', 'F') AND TO_NUMBER(SUBSTRING(season, 1, 4)) >= 1988 ) 
         OR 
-        ( position_rank <= 6 AND position = 'F' ) 
+        ( position_rank <= 4 AND position IN ('G', 'F') AND TO_NUMBER(SUBSTRING(season, 1, 4)) < 1988 ) 
         OR
-        ( position_rank <= 3 AND position = 'C' ) 
+        ( position_rank <= 3 AND position = 'C' AND TO_NUMBER(SUBSTRING(season, 1, 4)) >= 1988 ) 
+        OR 
+        ( position_rank <= 2 AND position = 'C' AND TO_NUMBER(SUBSTRING(season, 1, 4)) < 1988 ) 
 )
 SELECT 
     season,

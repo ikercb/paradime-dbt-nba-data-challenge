@@ -8,7 +8,7 @@ WITH player_ws AS (
         {{ ref('win_shares') }}
     -- Keep only the player with the most win shares
     QUALIFY ROW_NUMBER() OVER(
-        PARTITION BY o.season 
+        PARTITION BY season 
         ORDER BY ws DESC
     ) = 1
 ),
